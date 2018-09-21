@@ -4,11 +4,12 @@
 	<meta charset="utf-8">
 	<title>留言建议</title>
 	<link rel="stylesheet" type="text/css" href="./css/liuyan.css">
-	<link rel="stylesheet" type="text/css" href="./css/iconfont.css">
+	<link rel="stylesheet" type="text/css" href="./iconfont/iconfont.css">
+    <link rel="stylesheet" href="./css/animate.css">
 </head>
 <body>
 	<!-- 导航栏 -->
-	<div class="nav">
+	<header>
 		<div class="nav-inner">
 		    <div class="nav-inner-logo">
 		    	<a href="#"></a>
@@ -19,12 +20,19 @@
 			        <a href="huayanhuayu.html" title="花言花语">花言花语</a>
 			        <a href="#" title="素馨动态">素馨动态</a>
 			        <a href="huayi.html" title="素馨花艺">素馨花艺</a>
-			        <a href="#" title="留言建议">留言建议</a>
+			        <a href="#" title="留言建议" class="hot">留言建议
+                        <i class="iconfont icon-xiala"></i>
+                        <div>
+                            <i class="iconfont icon-shang "></i>
+                            <div class="animated slideInLeft">提交留言</div>
+                            <div class="animated slideInLeft">查看留言</div>
+                        </div>
+                    </a>
 			        <a href="guanyu.html" title="关于素馨">关于素馨</a>
 		    	</div>
 		    </div>
 		</div>
-	</div>
+	</header>
 	<!-- 站位块儿 -->
 	<div class="zhanwei"></div>
 
@@ -34,122 +42,242 @@
 		<div class="main-top">留言建议</div>
 		<!-- main下半部正文部分 -->
 		<div class="main-bottom">
-			<!-- main左边列表部分 -->
-			<div class="main-left">
-			    <div>
-				    <div class="icon">
-				    	<i class="iconfont icon-touxiang"></i>
-				    </div>
-				    <div class="inf">
-				    	<h4>张三</h4>
-				    	<p>更新有些慢</p>
-				    </div>
-			    </div>
-			    <div>
-				    <div class="icon">
-				    	<i class="iconfont icon-touxiang"></i>
-				    </div>
-				    <div class="inf">
-				    	<h4>黄玉花</h4>
-				    	<p>更新有些慢</p>
-				    </div>
-			    </div>
-			    <div>
-				    <div class="icon">
-				    	<i class="iconfont icon-touxiang"></i>
-				    </div>
-				    <div class="inf">
-				    	<h4>xzxczdc</h4>
-				    	<p>xczxzcxcz</p>
-				    </div>
-			    </div>
-			    <div>
-				    <div class="icon">
-				    	<i class="iconfont icon-touxiang"></i>
-				    </div>
-				    <div class="inf">
-				    	<h4>werr</h4>
-				    	<p>gfegre</p>
-				    </div>
-			    </div>
-			    <div>
-				    <div class="icon">
-				    	<i class="iconfont icon-touxiang"></i>
-				    </div>
-				    <div class="inf">
-				    	<h4>橙子</h4>
-				    	<p>121</p>
-				    </div>
-			    </div>
-			    <div>
-				    <div class="icon">
-				    	<i class="iconfont icon-touxiang"></i>
-				    </div>
-				    <div class="inf">
-				    	<h4>上天</h4>
-				    	<p>1111</p>
-				    </div>
-			    </div>
-			    <div>
-				    <div class="icon">
-				    	<i class="iconfont icon-touxiang"></i>
-				    </div>
-				    <div class="inf">
-				    	<h4>橙子</h4>
-				    	<p>不错哦</p>
-				    </div>
-			    </div>
-			    <div>
-				    <div class="icon">
-				    	<i class="iconfont icon-touxiang"></i>
-				    </div>
-				    <div class="inf">
-				    	<h4>张志新</h4>
-				    	<p>恩恩</p>
-				    </div>
-			    </div>
-			    <div>
-				    <div class="icon">
-				    	<i class="iconfont icon-touxiang"></i>
-				    </div>
-				    <div class="inf">
-				    	<h4>周阳</h4>
-				    	<p>看起来相当不错哦</p>
-				    </div>
-			    </div>
-			    <div>
-				    <div class="icon">
-				    	<i class="iconfont icon-touxiang"></i>
-				    </div>
-				    <div class="inf">
-				    	<h4>我</h4>
-				    	<p>分厂的好</p>
-				    </div>
-			    </div>
-
-
-			    <!-- 左边列表底部加载更多 -->
-			    <a href="#" class="page">
-			    	<i class="iconfont icon-icon-test"></i>
-			    	加载更多
-			    </a>
-			</div>
+            <!-- main左边列表部分 -->
+            <div>
+                <ul class="main-left">
+                    <li>
+                        <div class="icon">
+                            <i class="iconfont icon-touxiang"></i>
+                        </div>
+                        <div class="inf">
+                            <h4>张三</h4>
+                            <p>更新有些慢</p>
+                        </div>
+                        <div class="times">
+                            <span>2018</span>
+                            <span>-</span>
+                            <span>09</span>
+                            <span>-</span>
+                            <span>17</span>&nbsp;
+                            <span>17</span>
+                            <span>:</span>
+                            <span>18</span>
+                            <span>:</span>
+                            <span>28</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="icon">
+                            <i class="iconfont icon-touxiang"></i>
+                        </div>
+                        <div class="inf">
+                            <h4>黄玉花</h4>
+                            <p>更新有些慢</p>
+                        </div>
+                        <div class="times">
+                            <span>2018</span>
+                            <span>-</span>
+                            <span>09</span>
+                            <span>-</span>
+                            <span>17</span>&nbsp;
+                            <span>17</span>
+                            <span>:</span>
+                            <span>18</span>
+                            <span>:</span>
+                            <span>28</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="icon">
+                            <i class="iconfont icon-touxiang"></i>
+                        </div>
+                        <div class="inf">
+                            <h4>xzxczdc</h4>
+                            <p>xczxzcxcz</p>
+                        </div>
+                        <div class="times">
+                            <span>2018</span>
+                            <span>-</span>
+                            <span>09</span>
+                            <span>-</span>
+                            <span>17</span>&nbsp;
+                            <span>17</span>
+                            <span>:</span>
+                            <span>18</span>
+                            <span>:</span>
+                            <span>28</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="icon">
+                            <i class="iconfont icon-touxiang"></i>
+                        </div>
+                        <div class="inf">
+                            <h4>werr</h4>
+                            <p>gfegre</p>
+                        </div>
+                        <div class="times">
+                            <span>2018</span>
+                            <span>-</span>
+                            <span>09</span>
+                            <span>-</span>
+                            <span>17</span>&nbsp;
+                            <span>17</span>
+                            <span>:</span>
+                            <span>18</span>
+                            <span>:</span>
+                            <span>28</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="icon">
+                            <i class="iconfont icon-touxiang"></i>
+                        </div>
+                        <div class="inf">
+                            <h4>橙子</h4>
+                            <p>121</p>
+                        </div>
+                        <div class="times">
+                            <span>2018</span>
+                            <span>-</span>
+                            <span>09</span>
+                            <span>-</span>
+                            <span>17</span>&nbsp;
+                            <span>17</span>
+                            <span>:</span>
+                            <span>18</span>
+                            <span>:</span>
+                            <span>28</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="icon">
+                            <i class="iconfont icon-touxiang"></i>
+                        </div>
+                        <div class="inf">
+                            <h4>上天</h4>
+                            <p>1111</p>
+                        </div>
+                        <div class="times">
+                            <span>2018</span>
+                            <span>-</span>
+                            <span>09</span>
+                            <span>-</span>
+                            <span>17</span>&nbsp;
+                            <span>17</span>
+                            <span>:</span>
+                            <span>18</span>
+                            <span>:</span>
+                            <span>28</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="icon">
+                            <i class="iconfont icon-touxiang"></i>
+                        </div>
+                        <div class="inf">
+                            <h4>橙子</h4>
+                            <p>不错哦</p>
+                        </div>
+                        <div class="times">
+                            <span>2018</span>
+                            <span>-</span>
+                            <span>09</span>
+                            <span>-</span>
+                            <span>17</span>&nbsp;
+                            <span>17</span>
+                            <span>:</span>
+                            <span>18</span>
+                            <span>:</span>
+                            <span>28</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="icon">
+                            <i class="iconfont icon-touxiang"></i>
+                        </div>
+                        <div class="inf">
+                            <h4>张志新</h4>
+                            <p>恩恩</p>
+                        </div>
+                        <div class="times">
+                            <span>2018</span>
+                            <span>-</span>
+                            <span>09</span>
+                            <span>-</span>
+                            <span>17</span>&nbsp;
+                            <span>17</span>
+                            <span>:</span>
+                            <span>18</span>
+                            <span>:</span>
+                            <span>28</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="icon">
+                            <i class="iconfont icon-touxiang"></i>
+                        </div>
+                        <div class="inf">
+                            <h4>周阳</h4>
+                            <p>看起来相当不错哦</p>
+                        </div>
+                        <div class="times">
+                            <span>2018</span>
+                            <span>-</span>
+                            <span>09</span>
+                            <span>-</span>
+                            <span>17</span>&nbsp;
+                            <span>17</span>
+                            <span>:</span>
+                            <span>18</span>
+                            <span>:</span>
+                            <span>28</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="icon">
+                            <i class="iconfont icon-touxiang"></i>
+                        </div>
+                        <div class="inf">
+                            <h4>我</h4>
+                            <p>分厂的好</p>
+                        </div>
+                        <div class="times">
+                            <span>2018</span>
+                            <span>-</span>
+                            <span>09</span>
+                            <span>-</span>
+                            <span>17</span>&nbsp;
+                            <span>17</span>
+                            <span>:</span>
+                            <span>18</span>
+                            <span>:</span>
+                            <span>28</span>
+                        </div>
+                    </li>
+                </ul>
+                <!-- 左边列表底部加载更多 -->
+                <a href="#" class="page">
+                    <i class="iconfont icon-icon-test"></i>
+                    加载更多
+                </a>
+            </div>
 			<!-- main右边小块儿 -->
 			<div class="main-right">
-				<input type="text" name="" value="姓名">
-				<input type="text" name="" value="联系电话">
-				<textarea cols="40" rows="4">您的建议</textarea>
-				<div>
-					<input type="text" name="" value="验证码">
+				<input type="text" name="" placeholder="姓名" class="names">
+                <div class="rem rem1">不能为空</div>
+				<input type="text" name="" placeholder="联系电话">
+				<textarea cols="40" rows="4" placeholder="您的建议"></textarea>
+                <div class="rem rem2">不能为空</div>
+				<div class="text">最多可输入100个字，现已输入<span>0</span>个字</div>
+				<div class="verify">
+					<input type="text" name="" placeholder="验证码">
 					<span></span>
 				</div>
 				<button type="submit" name="">提交</button>
 			</div>
 		</div>
 	</div>
-
-	
-
 	<!-- footer部分 -->
 	<div class="footer-top"></div>
 	<div class="footer">
@@ -168,4 +296,7 @@
 	</div>
 
 </body>
+
+<script src="./js/liuyan.js"></script>
+
 </html>

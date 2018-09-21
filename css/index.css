@@ -3,8 +3,8 @@
 	padding: 0;
 	margin: 0;
 	border: 0;
-	list-style: none;
-	text-decoration: none;
+	list-style: none; /*列表去标题*/
+	text-decoration: none;/*a链接去下划线*/
 	background-repeat: no-repeat;
 	background-position: center;
 	font-size: 14px;
@@ -45,26 +45,23 @@
 	margin-left: 10px;
 	float: left;
 }
-.nav-inner-a>div>a:nth-child(1) {
+.nav-inner-a>div>a.hot {
 	color: #16b0dc;
 }
 .nav-inner-a>div>a:hover {
 	color: #16b0dc;
 }
-
-
-
 /*banner图*/
 .banner {
 	width: 100%;
 	height: 780px;
 	position: relative;
 }
-
 .banner>.banner-img {
 	width: 100%;
 	height: 100%;
 	position: relative;
+    overflow: hidden;
 }
 .banner>.banner-img>a {
 	display: block;
@@ -72,7 +69,7 @@
 	height: 100%;
 	background-size: cover;
 	position: absolute;
-	left: 0;
+	left: -1920px;
 	top: 0;
 }
 .banner>.banner-img>.banner1 {
@@ -81,26 +78,30 @@
 .banner>.banner-img>.banner2 {
 	background-image: url(../img/banner2.jpg);
 }
-.banner>a {
+.banner>.btn {
 	width: 15%;
 	height: 100%;
 	position: absolute;
+    top: 0;
 	text-align: center;
+    cursor: pointer;
+    opacity: 0;
+}
+.banner>.btn:hover {
+    opacity: 1;
 }
 .banner>.banner-left {
 	left: 0;
-	top: 0;
 	z-index: 10;
-	background-image: linear-gradient(90deg,rgba(0,0,0,0.3),rgba(0,0,0,0.05));
+	background-image: linear-gradient(90deg,rgba(0,0,0,0.2),rgba(0,0,0,0.03));
 }
 .banner>.banner-right {
 	float: right;
 	right: 0;
-	top: 0;
 	z-index: 10;
-	background-image: linear-gradient(180deg,rgba(0,0,0,0.3),rgba(0,0,0,0.05));
+	background-image: linear-gradient(270deg,rgba(0,0,0,0.2),rgba(0,0,0,0.03));
 }
-.banner>a>i {
+.banner>.btn>i {
 	color: #ffffff;
 	font-size: 60px; 
 	line-height: 780px;
@@ -109,24 +110,40 @@
 	width: 80px;
 	height: 20px;
 	position: absolute;
-	top: 730px;
+	top: 750px;
 	left: 50%;
 	transform: translateX(-50%);
 }
+.banner-dian span {
+    width: 400px;
+    /*width: 0;*/
+    /*height: 0;*/
+    display: none;
+    text-align: center;
+    font-size: 36px;
+    font-weight: 300;
+    color: #bda5ed;
+    position: absolute;
+    top: -70px;
+    left: -180px;
+    overflow: hidden;
+    transition: all 1s;
+}
+.banner-dian span:last-child {
+    color: #faf2d2;
+}
 .banner-dian div {
-	width: 20px;
-	height: 20px;
+	width: 10px;
+	height: 10px;
 	border-radius: 50%;
 	float: left;
-	background-color: red;
+	background-color: #ccc;
 	margin-right: 20px;
+    cursor: pointer;
 }
 .banner-dian div:nth-child(2) {
 	margin-right: 0;
 }
-
-
-
 /*main部分*/
 /*main素馨花艺*/
 .main {
@@ -170,63 +187,56 @@
 	position: relative;
 	/*background-color: green;*/
 }
-.main-bottom>a {
-	display: block;
-	width: 30px;
-	height: 30px;
-	border-radius: 50%;
-	background-color: #a3afb7;
-	text-align: center;
-	margin-top: 150px;
+.main-bottom>.swiper-container {
+    width: 1010px;
+    height: 454px;
 }
-.main-bottom>a>i {
-	color: #ffffff;
-	font-size: 30px; 
-	line-height: 30px;
+.main-bottom>.main-banner-w>.main-banner {
+    width: 2045px;
+    height: 454px;
+    position: relative;
 }
-.main-bottom>a:hover {
-	background-color: black;
-}
-.main-bottom-left {
-	float: left;
-}
-.main-bottom-right {
-	float: right;
-}
-
-.main-bottom>div {
+.main-bottom>.main-banner-w>.main-banner>div {
 	width: 320px;
 	height: 418px;
-	margin: 0 25px;
 	/*background-color: blue;*/
-	float: left;
 }
-.main-bottom>div>div {
+.main-bottom>.main-banner-w>.main-banner>div>div {
 	width: 320px;
 	height: 320px;
 	border-radius: 50%;
+    background-size: cover;
 }
-.main-bottom>div>.mb1 {
+.main-bottom>.main-banner-w>.main-banner>div>.mb1 {
 	background-image: url(../img/mb1.png);
 }
-.main-bottom>div>.mb2 {
+.main-bottom>.main-banner-w>.main-banner>div>.mb2 {
 	background-image: url(../img/mb2.png);
 }
-.main-bottom>div>.mb3 {
+.main-bottom>.main-banner-w>.main-banner>div>.mb3 {
 	background-image: url(../img/mb3.png);
 }
-.main-bottom>div>h5 {
+.main-bottom>.main-banner-w>.main-banner>div>.mb4 {
+    background-image: url(../img/mb4.jpg);
+}
+.main-bottom>.main-banner-w>.main-banner>div>.mb5 {
+    background-image: url(../img/banner2.jpg);
+}
+.main-bottom>.main-banner-w>.main-banner>div>.mb6 {
+    background-image: url(../img/dr06.png);
+}
+.main-bottom>.main-banner-w>.main-banner>div>h5 {
 	display: block;
 	margin: 11px auto;
 	text-align: center;
 	font-size: 18px;
 	font-weight: 400;
 }
-.main-bottom>div>p {
+.main-bottom>.main-banner-w>.main-banner>div>p {
 	font-size: 14px;
 	color: #757575;
 }
-.main-bottom>div>a {
+.main-bottom>.main-banner-w>.main-banner>div>a {
 	display: block;
 	width: 320px;
 	height: 36px;
@@ -238,19 +248,42 @@
 	text-align: center;
 	margin-top: 10px;
 }
-.main-bottom>div>a>i {
+.main-bottom>.main-banner-w>.main-banner>div>a>i {
 	color: #9c2115;
 	font-size: 20px;
 }
-.main-bottom>div>a>img {
-	display: inline-block;
-	width: 24px;
-	height: 24px;
-	margin-right: 10px;
-	margin-top: 4px;
-	background-image: url(../img/mbx.jpg);
+.main-bottom>.main-banner-w>.main-banner>div>a>span {
+    color: #fff;
 }
-
+/*左右按钮部分*/
+.main-bottom .mainbtn {
+    display: block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 50%;
+    background-color: #c8cfd4;
+    text-align: center;
+    position: absolute;
+    top: 150px;
+    cursor: pointer;
+    background-image: none;
+    outline: none;
+}
+.main-bottom .mainbtn>i {
+    color: #ffffff;
+    font-size: 20px;
+    line-height: 30px;
+}
+.main-bottom .mainbtn:hover {
+    background-color: #b0b0b0;
+}
+.swiper-button-prev {
+    left: 0;
+}
+.swiper-button-next {
+    right: 0;
+}
 /*main2素馨花语*/
 .main2 {
 	width: 100%;

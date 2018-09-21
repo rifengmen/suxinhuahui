@@ -45,7 +45,7 @@
 	margin-left: 10px;
 	float: left;
 }
-.nav-inner-a>div>a:nth-child(6) {
+.nav-inner-a>div>a.hot {
 	color: #16b0dc;
 }
 .nav-inner-a>div>a:hover {
