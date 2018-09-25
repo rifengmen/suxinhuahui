@@ -297,6 +297,48 @@
 
 </body>
 
-<script src="./js/liuyan.js"></script>
+<!--js原生代码写法-->
+<!--<script src="./js/liuyan.js"></script>-->
+
+<!--jquery写法-->
+<script src="./js/jquery-3.3.1.min.js"></script>
+<script>
+
+    $("textarea").keydown(function () {
+        $(".text span").html($("textarea").val().length);
+        if ($(this).val().length > 100) {
+            $(".text span").html(100);
+            $(this).val(function () {
+                $(this).val().slice(0,100);
+            })
+        }
+    })
+    $("button").click(function () {
+        let values = $("textarea").val();
+        let name = $(".names").val();
+        if (values === "" || name === "") {
+           alert("不能为空");
+        }
+        else {
+            let str = `<li>
+                 <div class="icon">
+                    <i class="iconfont icon-touxiang"></i>
+                 </div>
+                 <div class="inf">
+                    <h4>${name}</h4>
+                     <p>${values}</p>
+                 </div>
+             </li>`
+            $("ul").append(str);
+            $("textarea").val("");
+            $(".names").val("");
+            $(".text span").html("0");
+        }
+    })
+    $(".icon").dblclick(function (e) {
+        console.log(e.target);
+        $(e.target).parents("li").remove();
+    })
+</script>
 
 </html>
