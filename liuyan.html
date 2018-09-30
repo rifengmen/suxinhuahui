@@ -308,15 +308,11 @@
         $(".text span").html($("textarea").val().length);
         if ($(this).val().length > 100) {
             $(".text span").html(100);
-            $(this).val(function () {
-                $(this).val().slice(0,100);
-            })
-        }
-    })
+            $(this).val($(this).val().slice(0,100))
+        };
+    });
     $("button").click(function () {
-        let values = $("textarea").val();
-        let name = $(".names").val();
-        if (values === "" || name === "") {
+        if ($("textarea").val() === "" || $(".names").val() === "") {
            alert("不能为空");
         }
         else {
@@ -325,8 +321,8 @@
                     <i class="iconfont icon-touxiang"></i>
                  </div>
                  <div class="inf">
-                    <h4>${name}</h4>
-                     <p>${values}</p>
+                    <h4>${$(".names").val()}</h4>
+                     <p>${$("textarea").val()}</p>
                  </div>
              </li>`
             $("ul").append(str);
@@ -336,9 +332,10 @@
         }
     })
     $(".icon").dblclick(function (e) {
-        console.log(e.target);
         $(e.target).parents("li").remove();
     })
+
+
 </script>
 
 </html>
